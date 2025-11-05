@@ -10,14 +10,7 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["node", "server.js"]
-```
+ENV PORT=3000
+ENV NODE_ENV=production
 
-### Paso 9: Crear `.dockerignore`
-```
-node_modules
-npm-debug.log
-.env
-.git
-.gitignore
-README.md
+CMD ["node", "server.js"]
